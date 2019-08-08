@@ -1,14 +1,14 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
-from .models import Workout
-from .forms import WorkoutForm
+# from .models import Workout
+# from .forms import WorkoutForm
 from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
 
-def home(request):
-    return HttpResponse('This is home')
+def landing(request):
+    return render(request, 'landing.html')
 
 def json_res(request):
     return render({"status": "Ok"})
