@@ -7,8 +7,11 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-def home(request):
-    return HttpResponse('This is home')
+def landing(request):
+    return render(request, 'landing.html')
+
+def about(request):
+    return render(request, 'about.html')
 
 def workout_list(request):
     workouts = Workout.objects.all()
