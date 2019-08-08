@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load staticfiles %}
+
+<div class="about-fyt-row">
+    <div class="container">
+        <div class="row about-fyt-header text-center">
+            <div class="col-md-12">
+                <h1>Learn More about FYT</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="about-fyt col-md-6">
+                <p> <span class="about-f">F</span><span class="about-y">Y</span><span class="about-t">T</span></p>
+                <img src="{% static 'images/fyt.png' %}" alt="fyt logo">
+            </div>
+            <div class="about-description col-md-6">
+                <p>Fyt is an online bodybuilding platfrom where you can share with the world 
+                    your daily workout routine. Fyt was developed by 3 Aspiring engineers at General Assembly.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row about-team text-center">
+        <div class="col-md-12">
+            <h1>The Team</h1>
+        </div>
+    </div>
+</div>
+<div class="about-fyt-row">
+    <div class="container">
+        <div class="row about-img-description">
+            <div class="col-md-6">
+                <img class="about-img" src="{% static 'images/pouya.png' %}" alt="">
+            </div>
+            <div class="col-md-6">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo officia dolorum veritatis delectus itaque. Autem suscipit amet eos. Eaque eligendi ratione dolore repellendus, velit inventore dolor minus harum voluptates tempore.</p>
+            </div>
+        </div>
+        <div class="row about-img-description">
+            <div class="col-md-6">
+                <img class="about-img" src="{% static 'images/james.png' %}" alt="">
+            </div>
+            <div class="col-md-6">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptates placeat libero fugiat veniam, reiciendis sint perferendis quo provident sit facilis fugit quod. Id veniam quasi ipsa dignissimos voluptatem libero.</p>
+            </div>
+        </div>
+        <div class="row about-img-description">
+            <div class="col-md-6">
+                <img class="about-img" src="{% static 'images/aza.png' %}" alt="">
+            </div>
+            <div class="col-md-6">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, molestiae deserunt distinctio similique et numquam consequuntur quod eligendi dolore eum vel repellat iure architecto corporis consequatur blanditiis, tempora recusandae aliquid.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
