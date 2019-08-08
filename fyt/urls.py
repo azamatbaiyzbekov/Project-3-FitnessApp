@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-# SECTION URL Patterns and routes
+# SECTION URL Patterns And routes
 
 urlpatterns = [
     path('', views.workout_list, name='workout_list'),
