@@ -6,7 +6,13 @@
 
 {% endif %}
 
+<body style="background-color: lightblue;">
+
+</body>
+
+
 <section class="form-section">
+    <h1 class="title">Log In</h1>
     <form action="{% url 'login' %}" method="POST" class="workout-form">
         {% csrf_token %}
         <p>
@@ -23,6 +29,8 @@
 
     </form>
 
-</section>
+
+</section> 
+
 
 {% endblock %}

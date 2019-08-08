@@ -43,7 +43,7 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            return redirect('#')
+            return redirect('workout_list')
 
         else:
             return render(request, 'login.html', {'error': 'Invalid Credentials'})
@@ -53,4 +53,4 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect('#')
+    return redirect('workout_list')

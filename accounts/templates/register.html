@@ -5,7 +5,8 @@
 <p style="background-color: lightblue;">{{error}}</p>
 {% endif %}
 
-<section class="form-section">
+
+ <section class="form-section">
     <form action="{% url 'register' %}" method="POST" class="workout-form">
         {% csrf_token %}
         <p>
@@ -41,7 +42,7 @@
         <button type="submit">Register</button>
 
     </form>
-</section>
+</section> 
 
 
 {% endblock %}
