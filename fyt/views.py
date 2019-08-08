@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Workout
-# from .forms import WorkoutForm
+from .forms import WorkoutForm
 from django.contrib.auth.decorators import login_required
 
 
