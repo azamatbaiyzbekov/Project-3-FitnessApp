@@ -1,4 +1,4 @@
-from django.shortcuts import render,
+from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.contrib.auth.models import User
 
@@ -46,7 +46,7 @@ def login(request):
             return redirect('#')
 
         else:
-            return render(request, 'login.html' {'error': 'Invalid Credentials'})
+            return render(request, 'login.html', {'error': 'Invalid Credentials'})
     else:
         return render(request, 'login.html')
 
