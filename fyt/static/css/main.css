@@ -1,59 +1,94 @@
 * {
     box-sizing: border-box;
 }
+/*===================== ABOUT PAGE =================== */
+.about-fyt-header {
+    margin-top: px;
+    font-size: 2rem;
+    font-family: 'Ma Shan Zheng', cursive;
+}
+.about-fyt-row {
+    background-color : #f0ede2;
+}
+.about-fyt p {
+    font-family: 'Saira Stencil One', cursive;
+    font-size: 10rem;
+    transform: rotate(-25deg);
+    margin-top: 1rem;
+}
+/* About page Fyt span colors */
+.about-f { 
+    color: purple;
+}
+.about-y {
+    color: orange;
+}
+.about-t {
+    color: darkred;
+}
 
-/* login, signup */ 
-.form-section {
-    max-width: 500px;
-    margin: 2em auto;
-    padding: 15px;
-    color: black;
-    display: grid;
-    place-content: center;
-    text-align: center;
-    background: silver;
-    }
-    
-    .form-section form {
-    width: 1200px;
-    max-width: 28em;
-    }
-    
-    .form-section input {
-    height: 30px;
-    }
-    
-    .form-section p {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    }
-    
-    .form-section h1 {
-    margin: 10px;
-    }
-    
-    .form-section button {
-    background-image: linear-gradient(to right, darkblue, turquoise, blue);
-    background-color: blue;
-    border: 1px solid #ddd;;
-    border-radius: 5%;
+.about-team{
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-family: 'Ma Shan Zheng', cursive;
+}
+
+.about-fyt img {
+    transform: rotate(-25deg);
+    margin: 0 0 10em 8em; 
+}
+
+.about-description  {
+    font-size: 2em;
+    margin: auto 0;
+    line-height: 2;
+}
+
+.about-img {
+    border: 10px solid white;
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    margin-top: 2rem;
+}
+.about-img-description {
+    margin-top: 5rem;
+}
+.about-img-description p {
     font-size: 1.5em;
-    padding: 10px;
-    color: white;
-    cursor: pointer;
-    font-weight: 600;
-    }
-
-    .title {
-    margin-bottom: 20px;
-    color: white;
-    font-family: 'Julius Sans One', sans-serif;
-    font-size: 40px;
-    text-shadow: 1px 1px black;
-    font-weight: 600;
-      }
-    
+    margin: 3rem 0;
+}
 
 
+/*========================= navbar *====================*/
 
+.navbar-custom {
+    background-color: #ff5500;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+#carousel {
+    border: #ff5500;
+    padding-top: 100px;
+    width: 100%;
+    height: 20vh;
+}
+
+#footer {
+    background-color: black;
+    height: 2.5em;
+    display: inline;
+}
