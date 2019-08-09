@@ -30,7 +30,7 @@ def workout_create(request):
             workout = form.save(commit=False)
             workout.user = request.user
             workout.save()
-            return redirect('workout_detail', pk=workout.pk)
+            return redirect('workout_list')
     else: 
         form = WorkoutForm()
     return render(request, 'workout_form.html', {'form': form, 'header': 'New Workout'})
