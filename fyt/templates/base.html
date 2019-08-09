@@ -19,7 +19,7 @@
     <div class="container">
             <header>
                     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-                        <a class="navbar-brand" href="/">
+                        <a class="navbar-brand" href="{% url 'landing' %}">
                             <img src="../static/images/dumbbell.png" width="30" height="30" class="d-inline-block align-top" alt="">
                             FYT
                         </a>
@@ -31,19 +31,19 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Home</a>
+                                    <a class="nav-link" href="{% url 'workout_list' %}">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Profile</a>
+                                    <a class="nav-link" href="{% url 'profile' %}">Profile</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">About Us</a>
+                                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Login</a>
+                                    <a class="nav-link" href="{% url 'login' %}">Login</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Sign Up</a>
+                                    <a class="nav-link" href="{% url 'register' %}">Sign Up</a>
                                 </li>
                             </ul>
                         </div>
