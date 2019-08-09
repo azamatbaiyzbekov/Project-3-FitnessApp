@@ -43,8 +43,7 @@
 <div class="container mt-5">
   <div class="row">
     {% for workout in workouts %}
-      <div class="col-md-3">
-        <div class="workout_card">
+      <div class="col-md-3 workout_card">
           Submited by: {{workout.user.username}}
           <a href="{% url 'workout_detail' pk=workout.pk %}">
             {{ workout.workout_name }}
@@ -62,7 +61,6 @@
             {{ workout.reps_exercise_4 }}
           </a>
         </div>
-      </div>
       {% endfor %}
   </div>
   
