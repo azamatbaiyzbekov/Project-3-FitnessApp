@@ -1,6 +1,38 @@
 * {
     box-sizing: border-box;
 }
+/* ==================== Workout HOME PAGE ============= */
+
+.workout-card {
+    border: none;
+    border-radius: 5px;
+    padding: 3em;
+    margin: 30px;
+    max-height: 40;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.workout-submited-by {
+    font-size : 2em;
+}
+.workout-card > a, .workout-card li {
+    text-decoration: none;
+    list-style: none;
+}
+.workout-add-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.workout-add-footer > a {
+    font-size: 5rem;
+    text-decoration: none; 
+}
+.workout-add-footer a:hover {
+    color: orange;
+}
+
 /*===================== ABOUT PAGE =================== */
 .about-fyt-header {
     margin-top: px;

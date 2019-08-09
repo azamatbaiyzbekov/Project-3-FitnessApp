@@ -2,72 +2,36 @@
 
 {% block content %}
 
-<!-- <div class="row mb-2">
-    <div class="col-md-6">
-      <div
-        class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">LEGS</strong>
-          <h3 class="mb-0">temp</h3>
-          <div>
-            <p class="card-text mb-auto sub-text">temp</p>
-            <a href="#" class="stretched-link sub-text float-right">TEMP</a>
-          </div>
-        </div>
-        <div class="col-auto d-block">
-          <div class="a-container">
-            <img src="#" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div
-        class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">TEMP</strong>
-          <h3 class="mb-0">TEMP</h3>
-          <div>
-            <p class="card-text mb-auto sub-text">Temp</p>
-            <a href="#" class="stretched-link sub-text float-right">temp</a>
-          </div>
-        </div>
-        <div class="col-auto d-block">
-          <div class="a-container">
-            <img src="#" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 <div class="container mt-5">
   <div class="row">
     {% for workout in workouts %}
-      <div class="col-md-3">
-        <div class="workout_card">
-          Submited by: {{workout.user.username}}
+      <div class="col-md-3 workout-card">
+          <div class="workout-submited-by">{{workout.user.username}}</div> 
           <a href="{% url 'workout_detail' pk=workout.pk %}">
-            {{ workout.workout_name }}
-            {{ workout.exercise_name_1 }}
-            {{ workout.sets_exercise_1 }}
-            {{ workout.reps_exercise_1 }}
-            {{ workout.exercise_name_2 }}
-            {{ workout.sets_exercise_2 }}
-            {{ workout.reps_exercise_2 }}
-            {{ workout.exercise_name_3 }}
-            {{ workout.sets_exercise_3 }}
-            {{ workout.reps_exercise_3 }}
-            {{ workout.exercise_name_4 }}
-            {{ workout.sets_exercise_4 }}
-            {{ workout.reps_exercise_4 }}
+            <ul>
+              <h2><li>{{ workout.workout_name }}</li></h2> 
+              <h5><li>{{ workout.exercise_name_1 }}</li></h5> 
+              <li>Sets : {{ workout.sets_exercise_1 }}</li>
+              <li>Reps : {{ workout.reps_exercise_1 }}</li>
+              <h5><li>{{ workout.exercise_name_2 }}</li></h5> 
+              <li>Sets : {{ workout.sets_exercise_2 }}</li>
+              <li>Reps :{{ workout.reps_exercise_2 }}</li>
+              <h5><li>{{ workout.exercise_name_3 }}</li></h5> 
+              <li>Sets : {{ workout.sets_exercise_3 }}</li>
+              <li>Reps : {{ workout.reps_exercise_3 }}</li>
+              <h5><li>{{ workout.exercise_name_4 }}</li></h5> 
+              <li>Sets: {{ workout.sets_exercise_4 }}</li>
+              <li>Reps : {{ workout.reps_exercise_4 }}</li>
+            </ul>
           </a>
-        </div>
       </div>
       {% endfor %}
   </div>
-  
 </div>
-    <h2>Workouts <a href="{% url 'workout_create' %}">+</a></h2>
+<div class="workout-add-footer">
+    <a href="{% url 'workout_create' %}">+</a>
+</div>
+    
     
 
 
