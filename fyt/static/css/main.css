@@ -11,7 +11,10 @@
     max-height: 40;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.workout-card > a {
+.workout-submited-by {
+    font-size : 2em;
+}
+.workout-card > a, .workout-card li {
     text-decoration: none;
     list-style: none;
 }
