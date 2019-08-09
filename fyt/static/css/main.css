@@ -113,10 +113,8 @@
 }
 
 #carousel {
-    border: #ff5500;
-    padding-top: 100px;
     width: 100%;
-    height: 20vh;
+    height: 75vh;
 }
 
 #footer {
