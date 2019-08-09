@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %]
+
+<h1 class="profile-name">{{user.username}}</h1>}
+
+
+<section>
+
+    <ul class="workouts">
+        <h2>Posted Workouts</h2>
+        {% if workouts %}
+
+        {% for workout in workouts %}
+        <a href="{% url 'workout_detail' pk=workout.pk %}">
+            <li class="workout">
+                <img src="{{workout.photo_url}}" />
+                {{workout.name}}
+
+            </li>
+        </a>
+
+        {% endfor %}
+        {% else %}
+        <h2>You have no Submitted Workouts</h2>
+        {% endif %}
+    </ul>
+
+
+</section>
+
+{% endblock %}
