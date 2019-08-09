@@ -1,33 +1,40 @@
 {% extends 'base.html'%}
 {% block content %}
 
+<div class="container">
 
-<section class="artist-header">
-    <section class="artist-info">
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum maiores nulla aliquid! Nulla, unde possimus
-            consequatur natus quibusdam provident explicabo tempora dolore minima, veniam iste, quod porro labore?
-            Facilis, aliquam?ƒ
-            {{ workout.workout_name }}
-            {{ workout.exercise_name_1 }}
-            {{ workout.sets_exercise_1 }}
-            {{ workout.reps_exercise_1 }}
-            {{ workout.exercise_name_2 }}
-            {{ workout.sets_exercise_2 }}
-            {{ workout.reps_exercise_2 }}
-            {{ workout.exercise_name_3 }}
-            {{ workout.sets_exercise_3 }}
-            {{ workout.reps_exercise_3 }}
-            {{ workout.exercise_name_4 }}
-            {{ workout.sets_exercise_4 }}
-            {{ workout.reps_exercise_4 }}
-        </p>
-        <h2>{{workout.workout_name }} <a href="{% url 'workout_edit' pk=workout.pk %}">edit</a></h2>
-        <h4><a href="{% url 'workout_delete' pk=workout.pk %}" class="delete">delete</a></h4>
-    </section>
-</section>
-
-
+        <div class="row ">
+            <div class="workout-card m-auto">
+                
+                <div class="workout-submited-by">{{workout.user.username}}</div>
+                    <ul>
+                        <h2>
+                            <li>{{ workout.workout_name }}</li>
+                        </h2>
+                        <h5>
+                            <li>{{ workout.exercise_name_1 }}</li>
+                        </h5>
+                        <li>Sets : {{ workout.sets_exercise_1 }}</li>
+                        <li>Reps : {{ workout.reps_exercise_1 }}</li>
+                        <h5>
+                            <li>{{ workout.exercise_name_2 }}</li>
+                        </h5>
+                        <li>Sets : {{ workout.sets_exercise_2 }}</li>
+                        <li>Reps :{{ workout.reps_exercise_2 }}</li>
+                        <h5>
+                            <li>{{ workout.exercise_name_3 }}</li>
+                        </h5>
+                        <li>Sets : {{ workout.sets_exercise_3 }}</li>
+                        <li>Reps : {{ workout.reps_exercise_3 }}</li>
+                        <h5>
+                            <li>{{ workout.exercise_name_4 }}</li>
+                        </h5>
+                        <li>Sets: {{ workout.sets_exercise_4 }}</li>
+                        <li>Reps : {{ workout.reps_exercise_4 }}</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
 
 
 {% endblock %}

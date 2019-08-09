@@ -3,7 +3,8 @@ from django.http import HttpResponse
 from .models import Workout
 from .forms import WorkoutForm
 from django.contrib.auth.decorators import login_required
-
+import operator
+from django.db.models import Q
 
 # Create your views here.
 
@@ -13,16 +14,18 @@ def landing(request):
 def about(request):
     return render(request, 'about.html')
 
+@login_required
 def workout_list(request):
     workouts = Workout.objects.all()
     return render(request, 'workout_list.html', {"workouts": workouts})
 
+@login_required
 def workout_detail(request, pk):
     workout = Workout.objects.get(id=pk)
     return render(request, 'workout_detail.html', {"workout": workout})
 
 # NOTE Create workout controller
-
+@login_required
 def workout_create(request):
     if request.method == 'POST':
         form = WorkoutForm(request.POST)
@@ -36,7 +39,7 @@ def workout_create(request):
     return render(request, 'workout_form.html', {'form': form, 'header': 'New Workout'})
 
 # NOTE Edit Workout Controller
-
+@login_required
 def workout_edit(request, pk):
     workout = Workout.objects.get(id=pk)
     if request.method == 'POST':
@@ -49,14 +52,30 @@ def workout_edit(request, pk):
     return render(request, 'workout_form.html', {'form': form, 'header':f'Edit {workout.workout_name}'})
 
 # NOTE Delete Workout Controller
-
+@login_required
 def workout_delete(request, pk):
     Workout.objects.get(id=pk).delete()
     return redirect('workout_list')
   
 # NOTE User Profile Controller
-
+@login_required
 def profile(request):
     user = request.user
     workouts = Workout.objects.filter(user=user)
     return render(request, 'profile.html', {'workouts': workouts})
+
+# NOTE Likes
+@login_required 
+def like_workout(request):
+    workout_id = request.GET.get('workout_id', None)
+
+    likes = 0
+    if (workout_id):
+        workout = Workout.objects.get(id=int(workout_id))
+        if workout is not None:
+            likes = workout.likes + 1
+            workout.likes = likes
+            workout.save()
+    return HttpResponse(likes)
+
+

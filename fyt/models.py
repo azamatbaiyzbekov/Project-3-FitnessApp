@@ -18,6 +18,7 @@ class Workout(models.Model):
     sets_exercise_4 = models.PositiveIntegerField(default="0")
     reps_exercise_4 = models.PositiveIntegerField(default="0")
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='workouts')
+    likes = models.IntegerField(default=0)
     
     def __str__(self):
         return f"{self.workout_name}"
