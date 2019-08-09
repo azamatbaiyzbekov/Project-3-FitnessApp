@@ -24,6 +24,9 @@
               <li>Reps : {{ workout.reps_exercise_4 }}</li>
             </ul>
           </a>
+          <a class="waves-effect waves-light btn like-button" data-id="{{workout.id}}">
+              <i class="far fa-heart"></i> {% if workout.likes > 0 %} {{ workout.likes }} {% else %} {% endif %}
+            </a>
       </div>
       {% endfor %}
   </div>
