@@ -7,7 +7,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us3.list-manage.com","uuid":"a15f8335f8224a34ef0408b19","lid":"cdcc357511","uniqueMethods":true}) })</script>
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,44 +18,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-    <div class="container">
-            <header>
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-                        <a class="navbar-brand" href="/">
-                            <img src="../static/images/dumbbell.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                            FYT
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-            
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Profile</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">About Us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Login</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Sign Up</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </header>
-    </div>
-
-    
-=======
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <a class="navbar-brand" href="{% url 'landing' %}">
@@ -100,25 +61,13 @@
     </header>
 
 
->>>>>>> 49a7b08ffda18c5ebcc80dd719b97662f20175fe
     <main>
         <div class="content-body">
             {% block content %}
             {% endblock %}
         </div>
     </main>
-    <!-- <footer class="page-footer">
-        <nav id="footer" class="navbar navbar-expand-sm navbar-light bg-light">
-            <div class="row mx-auto">
-                <ul class="navbar-nav footer-nav mx-auto">
-                    <p>
-                        © Copyright 2019 FYT. All rights reserved.
-                    </p>
-                </ul>
-            </div>
-            </div>
-        </nav>
-    </footer> -->
+
 
 
 </body>
