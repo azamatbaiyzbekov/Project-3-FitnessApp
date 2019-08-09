@@ -92,3 +92,48 @@
     height: 2.5em;
     display: inline;
 }
+
+/* login, signup */ 
+.form-section {
+    max-width: 500px;
+    margin: 2em auto;
+    padding: 15px;
+    color: black;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background: silver;
+    }
+  
+    .form-section form {
+    width: 1200px;
+    max-width: 28em;
+    }
+  
+    .form-section input {
+    height: 30px;
+    }
+  
+    .form-section p {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    }
+  
+    .form-section h1 {
+    margin: 10px;
+    }
+  
+    .form-section button {
+    background-color: blue;
+    background-image: linear-gradient(to right, darkblue, turquoise, blue);
+    border: none;
+    border-radius: 5%;
+    font-size: 1.5em;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600yr
+    }
+
+    
