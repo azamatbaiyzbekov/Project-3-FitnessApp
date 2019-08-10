@@ -2,8 +2,9 @@
     box-sizing: border-box;
 }
 .content-body {
-    margin-top: 10vh;
+    margin-top: 8vh;
 }
+
 /* ==================== Workout HOME PAGE ============= */
 
 .workout-card {
@@ -43,7 +44,6 @@
 
 /*===================== ABOUT PAGE =================== */
 .about-fyt-header {
-    margin-top: px;
     font-size: 2rem;
     font-family: 'Ma Shan Zheng', cursive;
 }
@@ -99,37 +99,53 @@
     margin: 3rem 0;
 }
 
+/* ======================== LANDING =================== */
 
+.landing-fyt {
+    font-family: 'Saira Stencil One', cursive;
+    font-size: 10rem;
+    margin-top: 2rem;
+
+}
+.landing-fyt-row {
+    background: #0f0e0e;
+    height: 70vh;
+}
+.landing-f {
+    color: yellow;
+}
+.landing-y {
+    color: white;
+}
+.landing-t {
+    color: yellow;
+}
+.landing-fyt-p {
+    color: #EBD7B6;
+}
 /*========================= navbar *====================*/
 
-.navbar-custom {
-    background-color: #ff5500;
+.navbar {
+    background: #0f0e0e;
 }
-/* change the brand and text color */
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: rgba(255,255,255,.8);
+.navbar li a, .navbar-brand {
+    color: white;
+    margin-right: 2rem;
 }
-/* change the link color */
-.navbar-custom .navbar-nav .nav-link {
-    color: rgba(255,255,255,.5);
+.navbar .sign-up {
+    background: yellow;
+    border-radius: 1px;
 }
-/* change the color of active or hovered links */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-    color: #ffffff;
+.navbar li a:hover, .navbar-brand:hover {
+    color: yellow;
 }
-
-#carousel {
-    width: 100%;
-    height: 75vh;
+.sign-up {
+    color: black !important;
+}
+.sign-up:hover {
+    background: orange;
 }
 
-#footer {
-    background-color: black;
-    /* height: 2.5em; */
-    display: inline;
-}
 
 /* login, signup */ 
 .form-section {
@@ -173,5 +189,3 @@
     cursor: pointer;
     font-weight: 600yr
     }
-
-    
