@@ -43,60 +43,59 @@
 }
 
 /*===================== ABOUT PAGE =================== */
-.about-fyt-header {
-    font-size: 2rem;
-    font-family: 'Ma Shan Zheng', cursive;
-}
-.about-fyt-row {
-    background-color : #f0ede2;
+.about-fyt-header h3{
+    margin-top: 1.5em;
 }
 .about-fyt p {
     font-family: 'Saira Stencil One', cursive;
-    font-size: 10rem;
+    font-size: 8em;
     transform: rotate(-25deg);
     margin-top: 1rem;
 }
+.about-img-description p {
+    font-size: 1.5em;
+    margin: 3rem 0;
+}
 /* About page Fyt span colors */
 .about-f { 
-    color: purple;
+    color: yellow;
 }
 .about-y {
-    color: orange;
+    color: black;
 }
 .about-t {
-    color: darkred;
+    color: yellow;
 }
-
-.about-team{
-    margin-top: 3rem;
-    font-size: 2rem;
-    font-family: 'Ma Shan Zheng', cursive;
-}
-
 .about-fyt img {
     transform: rotate(-25deg);
     margin: 0 0 10em 8em; 
 }
 
 .about-description  {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: auto 0;
     line-height: 2;
+    top: -50px;
 }
 
 .about-img {
-    border: 10px solid white;
-    border-radius: 50%;
-    width: 15rem;
-    height: 15rem;
-    margin-top: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10%;
+    width: 18rem;
+    height: 18rem;
 }
 .about-img-description {
     margin-top: 5rem;
 }
-.about-img-description p {
-    font-size: 1.5em;
-    margin: 3rem 0;
+.github-link {
+    top: -15;
+    font-size: 3rem;
+}
+.git {
+    color: #FFC0CB;
+}
+.linked {
+    color: #0077B5;
 }
 
 /* ======================== LANDING =================== */
