@@ -8,38 +8,49 @@
 /* ==================== Workout HOME PAGE ============= */
 
 .workout-card {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: none;
     border-radius: 5px;
-    padding: 3em;
-    margin: 30px;
-    max-height: 40;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1em;
+    margin: 10px;
+    background: #DDEBF3;
 }
+
 .workout-submited-by {
-    font-size : 2em;
+    font-size : 1.5em;
+    color: blue;
 }
 .workout-card > a, .workout-card li {
     text-decoration: none;
     list-style: none;
+    color: black;
 }
 .fa-heart {
     color: red;
     font-size: 2em;
 }
-.workout-add-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background: yellow;
-    
+.workout-add {
+    margin: 2rem;
 }
-.workout-add-footer > a {
+.workout-add > a {
+    padding: 1em;
+    color: #FFF;
     text-decoration: none; 
+    background: #6E5BAA;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.workout-add-footer a:hover {
-    color: orange;
+.workout-add a:hover {
+    background: yellow;
+    transition: all .5s ease;
+    color: black;
+}
+
+/* =================== PROFILE ====================== */
+.profile-header {
+    background: #BDE6FA;
 }
 
 /*===================== ABOUT PAGE =================== */

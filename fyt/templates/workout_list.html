@@ -3,40 +3,41 @@
 {% block content %}
 
 <div class="container mt-5">
-  <div class="row">
-    {% for workout in workouts %}
-      <div class="col-md-3 workout-card">
-          <div class="workout-submited-by">{{workout.user.username}}</div> 
-          <a href="{% url 'workout_detail' pk=workout.pk %}">
-            <ul>
-              <h2><li>{{ workout.workout_name }}</li></h2> 
-              <h5><li>{{ workout.exercise_name_1 }}</li></h5> 
-              <li>Sets : {{ workout.sets_exercise_1 }}</li>
-              <li>Reps : {{ workout.reps_exercise_1 }}</li>
-              <h5><li>{{ workout.exercise_name_2 }}</li></h5> 
-              <li>Sets : {{ workout.sets_exercise_2 }}</li>
-              <li>Reps :{{ workout.reps_exercise_2 }}</li>
-              <h5><li>{{ workout.exercise_name_3 }}</li></h5> 
-              <li>Sets : {{ workout.sets_exercise_3 }}</li>
-              <li>Reps : {{ workout.reps_exercise_3 }}</li>
-              <h5><li>{{ workout.exercise_name_4 }}</li></h5> 
-              <li>Sets: {{ workout.sets_exercise_4 }}</li>
-              <li>Reps : {{ workout.reps_exercise_4 }}</li>
-            </ul>
-          </a>
-          <a class="waves-effect waves-light btn like-button" data-id="{{workout.id}}">
-              <i class="far fa-heart"></i> {% if workout.likes > 0 %} {{ workout.likes }} {% else %} {% endif %}
+    <div class="row">
+        <div class="col-md-12 text-center workout-add">
+            <a href="{% url 'workout_create' %}">Add a workout</a>
+        </div>
+    </div>
+    <div class="row justify-content-center ">
+        {% for workout in workouts %}
+        <div class="col-md-3 sameHeight workout-card">
+            <div class="workout-submited-by">{{workout.user.username}}</div>
+            <a href="{% url 'workout_detail' pk=workout.pk %}">
+                <h5>{{ workout.workout_name}}</h5>
+                <div class="bench">
+                    <h5>{{ workout.exercise_name_1 }}</h5>
+                    <p>Sets : {{ workout.sets_exercise_1 }} Reps : {{ workout.reps_exercise_1 }}</p>
+                </div>
+                <div class="bench">
+                    <h5>{{ workout.exercise_name_2 }}</h5>
+                    <p>Sets : {{ workout.sets_exercise_2 }} Reps : {{ workout.reps_exercise_2 }}</p>
+                </div>
+                <div class="bench">
+                    <h5>{{ workout.exercise_name_3 }}</h5>
+                    <p>Sets : {{ workout.sets_exercise_3 }} Reps : {{ workout.reps_exercise_3 }}</p>
+                </div>
+                <div class="bench">
+                    <h5>{{ workout.exercise_name_4 }}</h5>
+                    <p>Sets : {{ workout.sets_exercise_4 }} Reps : {{ workout.reps_exercise_4 }}</p>
+                </div>
             </a>
-      </div>
-      {% endfor %}
-  </div>
+            <a class="waves-effect waves-light btn like-button" data-id="{{workout.id}}">
+                <i class="far fa-heart"></i> {% if workout.likes > 0 %} {{ workout.likes }} {% else %} {% endif %}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
 </div>
-<div class="workout-add-footer">
-    <a href="{% url 'workout_create' %}">+</a>
-</div>
-    
-    
-
 
 
 {% endblock %}
