@@ -8,8 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 landing-fyt  text-center">
-                <p> <span class="landing-f">F </span><span class="landing-y">Y </span><span class="landing-t">T </span>
-                </p>
+                <p> <span class="landing-f">F </span><span class="landing-y">Y </span><span class="landing-t">T </span></p>
             </div>
         </div>
         <div class="row">
@@ -24,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 landing-icon-header text-center">
-                <h3>Powerful and highly interactive</h3>
+                <p>Powerful and highly interactive</p>
             </div>
         </div>
         <div class="row">
@@ -69,8 +68,8 @@
 <div class="landing-review-row">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
-                <h3>Everything you would expect</h3>
+            <div class="col-md-12 landing-icon-header text-center">
+                <p>Everything you would expect</p>
             </div>
         </div>
         <div class="row ">
@@ -142,67 +141,36 @@
 
 
 <!-- Footer -->
-<footer class="page-footer font-small indigo">
+<footer class="page-footer font-small landing-footer">
 
     <!-- Footer Links -->
     <div class="container">
-
-        <!-- Grid row-->
         <div class="row text-center d-flex justify-content-center pt-5 mb-3">
-
-            <!-- Grid column -->
             <div class="col-md-2 mb-3">
                 <h6 class="text-uppercase font-weight-bold">
-                    <a href="#!">About us</a>
+                    <a href="{% url 'about' %}">About Us</a>
                 </h6>
             </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
             <div class="col-md-2 mb-3">
                 <h6 class="text-uppercase font-weight-bold">
-                    <a href="#!">Products</a>
+                    <a href="{% url 'login' %}">Login</a>
                 </h6>
             </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
             <div class="col-md-2 mb-3">
                 <h6 class="text-uppercase font-weight-bold">
-                    <a href="#!">Awards</a>
+                    <a href="{% url 'register' %}">Sign Up</a>
                 </h6>
             </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2 mb-3">
-                <h6 class="text-uppercase font-weight-bold">
-                    <a href="#!">Help</a>
-                </h6>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2 mb-3">
-                <h6 class="text-uppercase font-weight-bold">
-                    <a href="#!">Contact</a>
-                </h6>
-            </div>
-            <!-- Grid column -->
-
         </div>
-        <!-- Grid row-->
-        <hr class="rgba-white-light" style="margin: 0 15%;">
-
-
+        <div class="newsletter text-center">
+            <p><i class="far fa-paper-plane"></i> Subscribe to our monthly newsletter</p>
+            <input type="text" placeholder="Your email address">
+            <button class="newsletter-go">Go</button>
+        </div>
+        <hr class="rgba-white-light mt-5" style="margin: 0 15%;">
     </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
+    <div class="text-center py-3">© 2019 FYT All rights reserved</div>
+    
 
 </footer>
 <!-- Footer -->

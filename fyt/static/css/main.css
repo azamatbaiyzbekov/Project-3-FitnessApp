@@ -108,7 +108,7 @@
 
 }
 .landing-fyt-row {
-    background: #0f0e0e;
+    background: #624989;
     height: 70vh;
 }
 .landing-f {
@@ -130,16 +130,19 @@
 .landing-icon-header {
     margin-top: 1rem;
 }
+.landing-icon-header p {
+    font-size: 1.5rem;
+}
 .landing-icon {
     font-size: 3rem;
-    margin: 3rem;
+    margin: 2rem;
 }
 .landing-icon:hover {
     color: orange;
 }
 .landing-icon-p {
     font-size: 1rem;
-    margin: 3rem;
+    margin: 2rem;
     border-radius: 3px;
     background: #79589F;
     padding: 1rem;
@@ -177,21 +180,57 @@
 }
 .lan-p {
     background: #7991e5;
+    transition: all 2s ease;
+}
+.lan-p:hover {
+    background: #017BFF;
 }
 .lan-e {
-    background: #e5aa3a;
+    transition: all 2s ease;
+    background: #f9b539;
+}
+.lan-e:hover {
+    background: #FFA500;
 }
 .lan-d {
-    background: #fb6363;
+    transition: all 2s ease;
+    background: #ff5b5b;
+}
+.lan-d:hover {
+    background: #DC3545;
 }
 .bench p, .bench h5 {
     display:inline-block;
     line-height: 3rem;
 }
 
-.bench {text-align: right;}
+.bench {
+    text-align: right;
+}
 
-.bench h5 {float:left;}
+.bench h5 {
+    float:left;
+}
+.landing-footer {
+    margin-top: 2rem;
+    background: #F0F0F0;
+}
+.newsletter input {
+    border-radius: 4px;
+    border: 1px solid #d7d7d7;
+    padding: 5px 20px;
+}
+.newsletter button {
+    background-color: #6e5baa;
+    border: 0;
+    border-radius: 4px;
+    padding: 5px 15px;
+}
+.newsletter button:hover {
+    opacity: .9;
+}
+.sameHeight {min-height: 250px;}
+
 /*========================= navbar *====================*/
 
 .navbar {
@@ -215,48 +254,67 @@
     background: orange;
 }
 
+/* ================== Login / Signup =====================*/
 
-/* login, signup */ 
+.login-body {
+    background-color: #624989;
+    height: 100vh;
+}
+.signup-body {
+    background-color: #624989;
+}
 .form-section {
-    max-width: 500px;
-    margin: 2em auto;
-    padding: 15px;
-    color: black;
-    display: grid;
-    place-content: center;
-    text-align: center;
-    background: silver;
-    }
-  
-    .form-section form {
-    width: 1200px;
-    max-width: 28em;
-    }
-  
-    .form-section input {
-    height: 30px;
-    }
-  
-    .form-section p {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    }
-  
-    .form-section h1 {
-    margin: 10px;
-    }
-  
-    .form-section button {
-    background-color: blue;
-    background-image: linear-gradient(to right, darkblue, turquoise, blue);
+    background: #FFF;
+    margin: 0 auto;
     border: none;
-    border-radius: 5%;
-    font-size: 1.5em;
+    padding: 5rem;
+    border-radius: 9px;
+    margin-top: 7em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-section input {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px 15px;
+}
+.form-section button {
+    border: 0;
+    border-radius: 4px;
     padding: 10px;
-    color: white;
-    cursor: pointer;
-    font-weight: 600yr
-    }
-
-    .sameHeight {min-height: 250px;}
+    width: 100%;
+    background: #6e5baa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.landing-fyt-login {
+    position: absolute;
+    font-family: 'Saira Stencil One', cursive;
+    font-size: 5rem;
+    text-align: center;
+    left: -.5%;
+}
+.form-section .title {
+    font-size: 1.2em;
+}
+.form-section-signup {
+    background: #FFF;
+    margin: 0 auto;
+    border: none;
+    padding: 3em;
+    border-radius: 9px;
+    margin-top: 7em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-section-signup input {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px 15px;
+    width: 100%;
+}
+.form-section-signup button {
+    border: 0;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    background: #6e5baa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
