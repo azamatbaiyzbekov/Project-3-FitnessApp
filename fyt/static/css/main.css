@@ -123,6 +123,75 @@
 .landing-fyt-p {
     color: #EBD7B6;
 }
+
+.landing-icon-row {
+    background: #EDF1F6;
+}
+.landing-icon-header {
+    margin-top: 1rem;
+}
+.landing-icon {
+    font-size: 3rem;
+    margin: 3rem;
+}
+.landing-icon:hover {
+    color: orange;
+}
+.landing-icon-p {
+    font-size: 1rem;
+    margin: 3rem;
+    border-radius: 3px;
+    background: #79589F;
+    padding: 1rem;
+    color: #FFF;
+}
+
+/* ===  LANDING CRUD  */
+
+.landing-workout-card {
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.landing-workout-card ul {
+    list-style-type: none;
+    line-height: 1.5rem;
+}
+.landing-workout-card h5 {
+    text-align: center;
+}
+.landing-input {
+    width: 30%;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.landing-input-setrep {
+    width: 15%;
+    border-radius: 5px;
+    border: 1px solid black;
+
+}
+.btn-primary, .btn-warning, .btn-danger {
+    border-radius: 4px;
+    padding: .5em;
+}
+.lan-p {
+    background: #7991e5;
+}
+.lan-e {
+    background: #e5aa3a;
+}
+.lan-d {
+    background: #fb6363;
+}
+.bench p, .bench h5 {
+    display:inline-block;
+    line-height: 3rem;
+}
+
+.bench {text-align: right;}
+
+.bench h5 {float:left;}
 /*========================= navbar *====================*/
 
 .navbar {
@@ -189,3 +258,5 @@
     cursor: pointer;
     font-weight: 600yr
     }
+
+    .sameHeight {min-height: 250px;}
