@@ -8,7 +8,8 @@
             <p> <span class="landing-f">F </span><span class="landing-y">Y </span><span class="landing-t">T </span></p>
         </div>
         <div class="col-md-12 text-center mb-4">
-            <h1 class="profile-name">{{user.username}}</h1>
+            <h4>Profile</h4>
+            <h3 class="profile-name">{{user.username}}</h3>
         </div>
     </div>
 </div>
@@ -23,8 +24,8 @@
     <div class="row justify-content-center ">
         {% for workout in workouts %}
         <div class="col-md-3 sameHeight workout-card">
-            <h2> <a href="{% url 'workout_edit' pk=workout.pk %}">edit</a></h2>
-            <h4><a href="{% url 'workout_delete' pk=workout.pk %}" class="delete">delete</a></h4>
+            <a href="{% url 'workout_edit' pk=workout.pk %}" class="workout-edit btn-warning">edit</a>
+            <a href="{% url 'workout_delete' pk=workout.pk %}" class="workout-delete btn-danger">X</a>
             <div class="workout-submited-by">{{workout.user.username}}</div>
             <a href="{% url 'workout_detail' pk=workout.pk %}">
                 <h5>{{ workout.workout_name}}</h5>

@@ -16,10 +16,14 @@
     margin: 10px;
     background: #DDEBF3;
 }
+.workout-card:hover {
+    border: 1px solid #6E5BAA;
+}
 
 .workout-submited-by {
     font-size : 1.5em;
     color: blue;
+    text-align: center;
 }
 .workout-card > a, .workout-card li {
     text-decoration: none;
@@ -49,8 +53,17 @@
 }
 
 /* =================== PROFILE ====================== */
+
 .profile-header {
     background: #BDE6FA;
+}
+
+.workout-card .workout-edit {
+    padding: 8px;
+}
+.workout-card .workout-delete {
+    float: right;  
+    padding: 3px 8px; 
 }
 
 /*===================== ABOUT PAGE =================== */
@@ -321,6 +334,34 @@
     width: 100%;
 }
 .form-section-signup button {
+    border: 0;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    background: #6e5baa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ================== Workout Form ============*/
+.workout-form-body {
+    background: #6E5BAA;
+}
+.workout-form-section {
+    background: #FFF;
+    margin: 0 auto;
+    border: none;
+    padding: 2em;
+    border-radius: 9px;
+    margin-top: 3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.workout-form-section input{
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px 15px;
+    float: right;
+}
+.workout-form-section button {
     border: 0;
     border-radius: 4px;
     padding: 10px;
