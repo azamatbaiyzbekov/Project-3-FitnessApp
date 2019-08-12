@@ -20,8 +20,6 @@ def workout_list(request):
     if request.GET:
         query = request.GET['q']
     workouts = search(query)
-    exercises = workouts.id 
-    exercises_e = Exercise.objects.get(exercises)
     return render(request, 'workout_list.html', {"workouts": workouts, "query": query})
 @login_required
 def workout_detail(request, pk):
