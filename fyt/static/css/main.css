@@ -2,176 +2,370 @@
     box-sizing: border-box;
 }
 .content-body {
-    margin-top: 10vh;
+    margin-top: 8vh;
 }
+
 /* ==================== Workout HOME PAGE ============= */
 
 .workout-card {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: none;
     border-radius: 5px;
-    padding: 3em;
-    margin: 30px;
-    max-height: 40;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1em;
+    margin: 10px;
+    background: #DDEBF3;
 }
+.workout-card:hover {
+    border: 1px solid #6E5BAA;
+}
+
 .workout-submited-by {
-    font-size : 2em;
+    font-size : 1.5em;
+    color: blue;
+    text-align: center;
 }
 .workout-card > a, .workout-card li {
     text-decoration: none;
     list-style: none;
+    color: black;
 }
 .fa-heart {
     color: red;
     font-size: 2em;
 }
-.workout-add-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background: yellow;
-    
+.workout-add {
+    margin: 2rem;
 }
-.workout-add-footer > a {
+.workout-add > a {
+    padding: 1em;
+    color: #FFF;
     text-decoration: none; 
+    background: #6E5BAA;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.workout-add-footer a:hover {
-    color: orange;
+.workout-add a:hover {
+    background: yellow;
+    transition: all .5s ease;
+    color: black;
+}
+
+/* =================== PROFILE ====================== */
+
+.profile-header {
+    background: #BDE6FA;
+}
+
+.workout-card .workout-edit {
+    padding: 8px;
+}
+.workout-card .workout-delete {
+    float: right;  
+    padding: 3px 8px; 
 }
 
 /*===================== ABOUT PAGE =================== */
-.about-fyt-header {
-    margin-top: px;
-    font-size: 2rem;
-    font-family: 'Ma Shan Zheng', cursive;
-}
-.about-fyt-row {
-    background-color : #f0ede2;
+.about-fyt-header h3{
+    margin-top: 1.5em;
 }
 .about-fyt p {
     font-family: 'Saira Stencil One', cursive;
-    font-size: 10rem;
+    font-size: 8em;
     transform: rotate(-25deg);
     margin-top: 1rem;
 }
+.about-img-description p {
+    font-size: 1.5em;
+    margin: 3rem 0;
+}
 /* About page Fyt span colors */
 .about-f { 
-    color: purple;
+    color: yellow;
 }
 .about-y {
-    color: orange;
+    color: black;
 }
 .about-t {
-    color: darkred;
+    color: yellow;
 }
-
-.about-team{
-    margin-top: 3rem;
-    font-size: 2rem;
-    font-family: 'Ma Shan Zheng', cursive;
-}
-
 .about-fyt img {
     transform: rotate(-25deg);
     margin: 0 0 10em 8em; 
 }
 
 .about-description  {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: auto 0;
     line-height: 2;
+    top: -50px;
 }
 
 .about-img {
-    border: 10px solid white;
-    border-radius: 50%;
-    width: 15rem;
-    height: 15rem;
-    margin-top: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10%;
+    width: 18rem;
+    height: 18rem;
 }
 .about-img-description {
     margin-top: 5rem;
 }
-.about-img-description p {
-    font-size: 1.5em;
-    margin: 3rem 0;
+.github-link {
+    top: -15;
+    font-size: 3rem;
+}
+.git {
+    color: #FFC0CB;
+}
+.linked {
+    color: #0077B5;
 }
 
+/* ======================== LANDING =================== */
+
+.landing-fyt {
+    font-family: 'Saira Stencil One', cursive;
+    font-size: 10rem;
+    margin-top: 2rem;
+
+}
+.landing-fyt-row {
+    background: #624989;
+    height: 70vh;
+}
+.landing-f {
+    color: yellow;
+}
+.landing-y {
+    color: white;
+}
+.landing-t {
+    color: yellow;
+}
+.landing-fyt-p {
+    color: #EBD7B6;
+}
+
+.landing-icon-row {
+    background: #EDF1F6;
+}
+.landing-icon-header {
+    margin-top: 1rem;
+}
+.landing-icon-header p {
+    font-size: 1.5rem;
+}
+.landing-icon {
+    font-size: 3rem;
+    margin: 2rem;
+}
+.landing-icon:hover {
+    color: orange;
+}
+.landing-icon-p {
+    font-size: 1rem;
+    margin: 2rem;
+    border-radius: 3px;
+    background: #79589F;
+    padding: 1rem;
+    color: #FFF;
+}
+
+/* ===  LANDING CRUD  */
+
+.landing-workout-card {
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.landing-workout-card ul {
+    list-style-type: none;
+    line-height: 1.5rem;
+}
+.landing-workout-card h5 {
+    text-align: center;
+}
+.landing-input {
+    width: 30%;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.landing-input-setrep {
+    width: 15%;
+    border-radius: 5px;
+    border: 1px solid black;
+
+}
+.btn-primary, .btn-warning, .btn-danger {
+    border-radius: 4px;
+    padding: .5em;
+}
+.lan-p {
+    background: #7991e5;
+    transition: all 2s ease;
+}
+.lan-p:hover {
+    background: #017BFF;
+}
+.lan-e {
+    transition: all 2s ease;
+    background: #f9b539;
+}
+.lan-e:hover {
+    background: #FFA500;
+}
+.lan-d {
+    transition: all 2s ease;
+    background: #ff5b5b;
+}
+.lan-d:hover {
+    background: #DC3545;
+}
+.bench p, .bench h5 {
+    display:inline-block;
+    line-height: 3rem;
+}
+
+.bench {
+    text-align: right;
+}
+
+.bench h5 {
+    float:left;
+}
+.landing-footer {
+    margin-top: 2rem;
+    background: #F0F0F0;
+}
+.newsletter input {
+    border-radius: 4px;
+    border: 1px solid #d7d7d7;
+    padding: 5px 20px;
+}
+.newsletter button {
+    background-color: #6e5baa;
+    border: 0;
+    border-radius: 4px;
+    padding: 5px 15px;
+}
+.newsletter button:hover {
+    opacity: .9;
+}
+.sameHeight {min-height: 250px;}
 
 /*========================= navbar *====================*/
 
-.navbar-custom {
-    background-color: #ff5500;
+.navbar {
+    background: #0f0e0e;
 }
-/* change the brand and text color */
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: rgba(255,255,255,.8);
-}
-/* change the link color */
-.navbar-custom .navbar-nav .nav-link {
-    color: rgba(255,255,255,.5);
-}
-/* change the color of active or hovered links */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-    color: #ffffff;
-}
-
-#carousel {
-    width: 100%;
-    height: 75vh;
-}
-
-#footer {
-    background-color: black;
-    /* height: 2.5em; */
-    display: inline;
-}
-
-/* login, signup */ 
-.form-section {
-    max-width: 500px;
-    margin: 2em auto;
-    padding: 15px;
-    color: black;
-    display: grid;
-    place-content: center;
-    text-align: center;
-    background: silver;
-    }
-  
-    .form-section form {
-    width: 1200px;
-    max-width: 28em;
-    }
-  
-    .form-section input {
-    height: 30px;
-    }
-  
-    .form-section p {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    }
-  
-    .form-section h1 {
-    margin: 10px;
-    }
-  
-    .form-section button {
-    background-color: blue;
-    background-image: linear-gradient(to right, darkblue, turquoise, blue);
-    border: none;
-    border-radius: 5%;
-    font-size: 1.5em;
-    padding: 10px;
+.navbar li a, .navbar-brand {
     color: white;
-    cursor: pointer;
-    font-weight: 600yr
-    }
+    margin-right: 2rem;
+}
+.navbar .sign-up {
+    background: yellow;
+    border-radius: 1px;
+}
+.navbar li a:hover, .navbar-brand:hover {
+    color: yellow;
+}
+.sign-up {
+    color: black !important;
+}
+.sign-up:hover {
+    background: orange;
+}
 
-    
+/* ================== Login / Signup =====================*/
+
+.login-body {
+    background-color: #624989;
+    height: 100vh;
+}
+.signup-body {
+    background-color: #624989;
+}
+.form-section {
+    background: #FFF;
+    margin: 0 auto;
+    border: none;
+    padding: 5rem;
+    border-radius: 9px;
+    margin-top: 7em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-section input {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px 15px;
+}
+.form-section button {
+    border: 0;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    background: #6e5baa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.landing-fyt-login {
+    position: absolute;
+    font-family: 'Saira Stencil One', cursive;
+    font-size: 5rem;
+    text-align: center;
+    left: -.5%;
+}
+.form-section .title {
+    font-size: 1.2em;
+}
+.form-section-signup {
+    background: #FFF;
+    margin: 0 auto;
+    border: none;
+    padding: 3em;
+    border-radius: 9px;
+    margin-top: 7em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-section-signup input {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px 15px;
+    width: 100%;
+}
+.form-section-signup button {
+    border: 0;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    background: #6e5baa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ================== Workout Form ============*/
+.workout-form-body {
+    background: #6E5BAA;
+}
+.workout-form-section {
+    background: #FFF;
+    margin: 0 auto;
+    border: none;
+    padding: 2em;
+    border-radius: 9px;
+    margin-top: 3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.workout-form-section input{
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px 15px;
+    float: right;
+}
+.workout-form-section button {
+    border: 0;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    background: #6e5baa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

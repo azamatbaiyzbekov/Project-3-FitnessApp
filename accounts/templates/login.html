@@ -1,36 +1,82 @@
 {% extends 'base.html' %}
 {% block content %}
-{% if error %}
 
-<p style="background-color:lightblue;">{{error}}</p>
+<div class="login-body">
+    {% if error %}
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-12 text-center mt-5">
+                <p style="background-color:lightblue;">{{error}}</p>
+            </div>
+        </div>
+    </div>
 
-{% endif %}
+    {% endif %}
 
-<body style="background-color: lightblue;">
+    <div class="container login-container">
+        <div class="row">
+            <div class="col-md-12 landing-fyt-login">
+                <p> <span class="landing-f">F </span><span class="landing-y">Y </span><span class="landing-t">T </span>
+                </p>
+            </div>
+            <section class="form-section">
+                <p class="title text-center">Log In to your account</p>
+                <form action="{% url 'login' %}" method="POST" class="workout-form">
+                    {% csrf_token %}
+                    <p>
+                        <label for="username">Username</label> <br>
+                        <input type="text" name="username" required maxlength="25" minlength="2" placeholder="Username">
+                    </p>
+                    <p>
+                        <label for="password">Password</label> <br>
+                        <input type="password" name="password" required maxlength="25" minlength="2"
+                            placeholder="Password">
+                    </p>
+                    <button type="submit">Login</button>
+                </form>
 
-</body>
+            </section>
+
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small landing-footer">
+
+        <!-- Footer Links -->
+        <div class="container">
+            <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="{% url 'about' %}">About Us</a>
+                    </h6>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="{% url 'login' %}">Login</a>
+                    </h6>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="{% url 'register' %}">Sign Up</a>
+                    </h6>
+                </div>
+            </div>
+            <div class="newsletter text-center">
+                <p><i class="far fa-paper-plane"></i> Subscribe to our monthly newsletter</p>
+                <input type="text" placeholder="Your email address">
+                <button class="newsletter-go">Go</button>
+            </div>
+            <hr class="rgba-white-light mt-5" style="margin: 0 15%;">
+        </div>
+        <div class="text-center py-3">© 2019 FYT All rights reserved</div>
 
 
-<section class="form-section">
-    <h1 class="title">Log In</h1>
-    <form action="{% url 'login' %}" method="POST" class="workout-form">
-        {% csrf_token %}
-        <p>
-            <label for="username">Username</label>
-            <input type="text" name="username" required maxlength="25" minlength="2">
-        </p>
-        <p>
-            <label for="password">Password</label>
-            <input type="password" name="password" required maxlength="25" minlength="2">
-        </p>
-        <button type="submit">Login</button>
-    
+    </footer>
+    <!-- Footer -->
 
+</div>
 
-    </form>
-
-
-</section> 
 
 
 {% endblock %}

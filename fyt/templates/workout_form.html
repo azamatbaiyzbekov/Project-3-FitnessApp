@@ -1,12 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <section class="form-section">
-    <h1>{{header}}</h1>
-    <form method="POST" class="workout-form">
-      {% csrf_token %}
-      {{form.as_p}}
-      <button type="submit">Save</button>
-    </form>
-  </section>
+<div class="workout-form-body">
+    <div class="login-container">
+        <div class="row">
+            <section class="workout-form-section">
+                <h1>{{header}}</h1>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button type="submit">Post</button>
+                </form>
+            </section>
+        </div>
+
+    </div>
+</div>
+
 {% endblock %}

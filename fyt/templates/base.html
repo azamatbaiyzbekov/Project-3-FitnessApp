@@ -19,10 +19,11 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top">
             <a class="navbar-brand" href="{% url 'landing' %}">
-                <img src="{% static 'images/dumbbell.png' %}" width="30" height="30" class="d-inline-block align-top"
-                    alt="">
+                    <i class="fas fa-dumbbell"></i>
+                <!-- <img src="{% static 'images/dumbbell.png' %}" width="30" height="30" class="d-inline-block align-top navbar-logo"
+                    alt=""> -->
                 FYT
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -35,6 +36,9 @@
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'workout_list' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'profile' %}">Profile</a>
@@ -51,7 +55,7 @@
                         <a class="nav-link" href="{% url 'login' %}">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'register' %}">Sign Up</a>
+                        <a class="nav-link sign-up" href="{% url 'register' %}">Sign Up</a>
                     </li>
                     {% endif %}
 

@@ -2,62 +2,91 @@
 {% block content %}
 {% load staticfiles %}
 
-<div class="about-fyt-row">
-    <div class="container">
-        <div class="row about-fyt-header text-center">
-            <div class="col-md-12">
-                <h1>Learn More about FYT</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="about-fyt col-md-6">
-                <p> <span class="about-f">F</span><span class="about-y">Y</span><span class="about-t">T</span></p>
-                <img src="{% static 'images/fyt.png' %}" alt="fyt logo">
-            </div>
-            <div class="about-description col-md-6">
-                <p>Fyt is an online bodybuilding platfrom where you can share with the world 
-                    your daily workout routine. Fyt was developed by 3 Aspiring engineers at General Assembly.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+
 <div class="container">
-    <div class="row about-team text-center">
+    <div class="row about-fyt-header text-center">
         <div class="col-md-12">
-            <h1>The Team</h1>
+            <h3>Learn more about FYT</h3>
         </div>
     </div>
-</div>
-<div class="about-fyt-row">
-    <div class="container">
-        <div class="row about-img-description">
-            <div class="col-md-6">
-                <img class="about-img" src="{% static 'images/pouya.png' %}" alt="">
-            </div>
-            <div class="col-md-6">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo officia dolorum veritatis delectus itaque. Autem suscipit amet eos. Eaque eligendi ratione dolore repellendus, velit inventore dolor minus harum voluptates tempore.</p>
-            </div>
+    <div class="row">
+        <div class="about-fyt col-md-6">
+            <p> <span class="about-f">F</span><span class="about-y">Y</span><span class="about-t">T</span></p>
+            <img src="{% static 'images/fyt.png' %}" alt="fyt logo">
         </div>
-        <div class="row about-img-description">
-            <div class="col-md-6">
-                <img class="about-img" src="{% static 'images/james.png' %}" alt="">
-            </div>
-            <div class="col-md-6">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptates placeat libero fugiat veniam, reiciendis sint perferendis quo provident sit facilis fugit quod. Id veniam quasi ipsa dignissimos voluptatem libero.</p>
-            </div>
-        </div>
-        <div class="row about-img-description">
-            <div class="col-md-6">
-                <img class="about-img" src="{% static 'images/aza.png' %}" alt="">
-            </div>
-            <div class="col-md-6">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, molestiae deserunt distinctio similique et numquam consequuntur quod eligendi dolore eum vel repellat iure architecto corporis consequatur blanditiis, tempora recusandae aliquid.</p>
-            </div>
+        <div class="about-description col-md-6">
+            <p>Fyt is the social network for workout routines. An online bodybuilding platfrom where you can share
+                with the world
+                your daily workout routine. Fyt was developed by 3 Aspiring engineers at General Assembly.
+            </p>
         </div>
     </div>
 </div>
 
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-12">
+            <h1>Our Team</h1>
+        </div>
+    </div>
+    <div class="row text-center">
+
+        <div class="col-md-4 about-img-description"">
+                <img class=" about-img" src="{% static 'images/james.png' %}" alt="">
+            <p>James</p>
+            <a href=""><i class="git github-link fab fa-github-square"></i></a> <a href=""><i
+                    class="linked github-link fab fa-linkedin"></i></a>
+        </div>
+        <div class="col-md-4 about-img-description">
+            <img class="about-img" src="{% static 'images/pouya.png' %}" alt="">
+            <p>Pouya</p>
+            <a href=""><i class="git github-link fab fa-github-square"></i></a> <a href=""><i
+                    class="linked github-link fab fa-linkedin"></i></a>
+        </div>
+        <div class="col-md-4 about-img-description"">
+                <img class=" about-img" src="{% static 'images/aza.png' %}" alt="">
+            <p>Aza</p>
+            <a href=""><i class="git github-link fab fa-github-square"></i></a> <a href=""><i
+                    class="linked github-link fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small landing-footer">
+
+    <!-- Footer Links -->
+    <div class="container">
+        <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+            <div class="col-md-2 mb-3">
+                <h6 class="text-uppercase font-weight-bold">
+                    <a href="{% url 'about' %}">About Us</a>
+                </h6>
+            </div>
+            <div class="col-md-2 mb-3">
+                <h6 class="text-uppercase font-weight-bold">
+                    <a href="{% url 'login' %}">Login</a>
+                </h6>
+            </div>
+            <div class="col-md-2 mb-3">
+                <h6 class="text-uppercase font-weight-bold">
+                    <a href="{% url 'register' %}">Sign Up</a>
+                </h6>
+            </div>
+        </div>
+        <div class="newsletter text-center">
+            <p><i class="far fa-paper-plane"></i> Subscribe to our monthly newsletter</p>
+            <input type="text" placeholder="Your email address">
+            <button class="newsletter-go">Go</button>
+        </div>
+        <hr class="rgba-white-light mt-5" style="margin: 0 15%;">
+    </div>
+    <div class="text-center py-3">© 2019 FYT All rights reserved</div>
+
+
+</footer>
+<!-- Footer -->
 
 
 {% endblock %}
