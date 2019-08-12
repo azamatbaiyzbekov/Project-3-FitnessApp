@@ -2,41 +2,86 @@
 
 {% block content %}
 
+<form method="GET">
+  <input type="text" name="q" value="{{request.GET.q}}" id="id_q" placeholder="Search...">
+  <button id="submit" type="submit">Search</button>
+</form>
+
+{% if workouts %}
+
 <div class="container mt-5">
   <div class="row">
     {% for workout in workouts %}
-      <div class="col-md-3 workout-card">
-          <div class="workout-submited-by">{{workout.user.username}}</div> 
-          <a href="{% url 'workout_detail' pk=workout.pk %}">
-            <ul>
-              <h2><li>{{ workout.workout_name }}</li></h2> 
-              <h5><li>{{ workout.exercise_name_1 }}</li></h5> 
-              <li>Sets : {{ workout.sets_exercise_1 }}</li>
-              <li>Reps : {{ workout.reps_exercise_1 }}</li>
-              <h5><li>{{ workout.exercise_name_2 }}</li></h5> 
-              <li>Sets : {{ workout.sets_exercise_2 }}</li>
-              <li>Reps :{{ workout.reps_exercise_2 }}</li>
-              <h5><li>{{ workout.exercise_name_3 }}</li></h5> 
-              <li>Sets : {{ workout.sets_exercise_3 }}</li>
-              <li>Reps : {{ workout.reps_exercise_3 }}</li>
-              <h5><li>{{ workout.exercise_name_4 }}</li></h5> 
-              <li>Sets: {{ workout.sets_exercise_4 }}</li>
-              <li>Reps : {{ workout.reps_exercise_4 }}</li>
-            </ul>
-          </a>
-          <a class="waves-effect waves-light btn like-button" data-id="{{workout.id}}">
-              <i class="far fa-heart"></i> {% if workout.likes > 0 %} {{ workout.likes }} {% else %} {% endif %}
-            </a>
-      </div>
-      {% endfor %}
+    <div class="col-md-3 workout-card">
+      <div class="workout-submited-by">{{workout.user.username}}</div>
+      <a href="{% url 'workout_detail' pk=workout.pk %}">
+        <ul>
+          <h2>
+            <li>{{ workout.workout_name }}</li>
+          </h2>
+          <h5>
+            <li>{{ workout.exercise_name_1 }}</li>
+          </h5>
+          <li>Sets : {{ workout.sets_exercise_1 }}</li>
+          <li>Reps : {{ workout.reps_exercise_1 }}</li>
+          <h5>
+            <li>{{ workout.exercise_name_2 }}</li>
+          </h5>
+          <li>Sets : {{ workout.sets_exercise_2 }}</li>
+          <li>Reps :{{ workout.reps_exercise_2 }}</li>
+          <h5>
+            <li>{{ workout.exercise_name_3 }}</li>
+          </h5>
+          <li>Sets : {{ workout.sets_exercise_3 }}</li>
+          <li>Reps : {{ workout.reps_exercise_3 }}</li>
+          <h5>
+            <li>{{ workout.exercise_name_4 }}</li>
+          </h5>
+          <li>Sets: {{ workout.sets_exercise_4 }}</li>
+          <li>Reps : {{ workout.reps_exercise_4 }}</li>
+        </ul>
+      </a>
+      <a class="waves-effect waves-light btn like-button" data-id="{{workout.id}}">
+        <i class="far fa-heart"></i>
+        {% if workout.likes > 0 %}
+        {{ workout.likes }}
+        {% else %}
+        {% endif %}
+      </a>
+    </div>
+    {% endfor %}
   </div>
 </div>
-<div class="workout-add-footer">
-    <a href="{% url 'workout_create' %}">+</a>
-</div>
-    
-    
 
+{% else %}
+<div class="container">
+  <div class="row">
+    <div class="card m-auto">
+      <div class="card-body mt-2 mb-2">
+        <h2 class="card-title">
+          No Results
+        </h2>
+        <p class="card-text ">
+          There were no results matching your search: "{{query}}".
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
+<div class="workout-add-footer">
+  <a href="{% url 'workout_create' %}">+</a>
+</div>
+
+
+<script type="text/javascript">
+  document.getElementById("id_q").value = "{{query}}"
+  document.getElementById("submit").addEventListener("click", function () {
+    console.log(id_q.value)
+  });
+</script>
 
 
 {% endblock %}
