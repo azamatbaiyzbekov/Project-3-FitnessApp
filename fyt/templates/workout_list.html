@@ -26,23 +26,15 @@
             <div class="workout-submited-by">{{workout.user.username}}</div>
             <a href="{% url 'workout_detail' pk=workout.pk %}">
                 <h5>{{ workout.workout_name}}</h5>
+                {% for exercise in exercises %}
+
                 <div class="bench">
-                    <h5>{{ workout.exercise_name_1 }}</h5>
-                    <p>Sets : {{ workout.sets_exercise_1 }} Reps : {{ workout.reps_exercise_1 }}</p>
+                    <h5>{{ exercise.exercise_name }}</h5>
+                    <p>Sets : {{ exercise.sets }} Reps : {{ exercise.reps }}</p>
                 </div>
-                <div class="bench">
-                    <h5>{{ workout.exercise_name_2 }}</h5>
-                    <p>Sets : {{ workout.sets_exercise_2 }} Reps : {{ workout.reps_exercise_2 }}</p>
-                </div>
-                <div class="bench">
-                    <h5>{{ workout.exercise_name_3 }}</h5>
-                    <p>Sets : {{ workout.sets_exercise_3 }} Reps : {{ workout.reps_exercise_3 }}</p>
-                </div>
-                <div class="bench">
-                    <h5>{{ workout.exercise_name_4 }}</h5>
-                    <p>Sets : {{ workout.sets_exercise_4 }} Reps : {{ workout.reps_exercise_4 }}</p>
-                </div>
+                {% endfor %}
             </a>
+            
             <a class="waves-effect waves-light btn like-button" data-id="{{workout.id}}">
                 <i class="far fa-heart"></i> {% if workout.likes > 0 %} {{ workout.likes }} {% else %} {% endif %}
             </a>
