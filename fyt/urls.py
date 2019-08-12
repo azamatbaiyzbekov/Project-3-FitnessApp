@@ -10,8 +10,10 @@ urlpatterns = [
     path('workouts/<int:pk>/edit', views.workout_edit, name='workout_edit'),
     path('workouts/<int:pk>/delete', views.workout_delete, name='workout_delete'),
     path('workouts/new', views.workout_create, name='workout_create'),
+    # path('workouts/result', views.search, name='search'),
     path('profile/', views.profile, name='profile'),
     path('about/', views.about, name='about'),
     path('like_workout/', views.like_workout, name='like_workout'),
+    
 ]
 

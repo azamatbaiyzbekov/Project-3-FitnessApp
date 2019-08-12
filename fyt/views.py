@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 import operator
 from django.db.models import Q
 
+
 # Create your views here.
 
 def landing(request):
@@ -17,7 +18,9 @@ def about(request):
 @login_required
 def workout_list(request):
     workouts = Workout.objects.all()
+
     return render(request, 'workout_list.html', {"workouts": workouts})
+
 
 @login_required
 def workout_detail(request, pk):
@@ -77,5 +80,4 @@ def like_workout(request):
             workout.likes = likes
             workout.save()
     return HttpResponse(likes)
-
 
