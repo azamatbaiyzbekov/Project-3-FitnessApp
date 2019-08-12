@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Workout
+from .models import Workout, Exercise
 from .forms import WorkoutForm, ExerciseForm
 from django.contrib.auth.decorators import login_required
 import operator
@@ -20,7 +20,9 @@ def workout_list(request):
     if request.GET:
         query = request.GET['q']
     workouts = search(query)
+
     return render(request, 'workout_list.html', {"workouts": workouts, "query": query})
+
 @login_required
 def workout_detail(request, pk):
     workout = Workout.objects.get(id=pk)
@@ -56,20 +58,25 @@ def workout_create(request):
 @login_required
 def workout_edit(request, pk):
     workout = Workout.objects.get(id=pk)
+    exercise = Exercise.objects.get(id=pk)
     if request.method == 'POST':
         form = WorkoutForm(request.POST, instance=workout)
-        if form.is_valid():
+        e_form = ExerciseForm(request.POST, instance=exercise)
+        if form.is_valid() and e_form.is_valid():
             workout = form.save()
+            exercise = e_form.save()
+
             return redirect('workout_detail', pk=workout.pk)
     else:
         form = WorkoutForm(instance=workout)
-    return render(request, 'workout_form.html', {'form': form, 'header':f'Edit {workout.workout_name}'})
+        e_form = ExerciseForm(instance=exercise)
+    return render(request, 'workout_form.html', {'form': form, 'e_form':e_form, 'header':f'Edit {workout.workout_name}'})
 
 # NOTE Delete Workout Controller
 @login_required
 def workout_delete(request, pk):
     Workout.objects.get(id=pk).delete()
-    return redirect('workout_list')
+    return redirect('profile')
   
 # NOTE User Profile Controller
 @login_required
@@ -91,7 +98,6 @@ def like_workout(request):
             workout.likes = likes
             workout.save()
     return HttpResponse(likes)
-
 
 def search(query=None):
     queryset = []

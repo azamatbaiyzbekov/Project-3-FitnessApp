@@ -12,29 +12,29 @@
         </div>
     </div>
 
-    {% if workouts %}
-
-
     <div class="row">
         <div class="col-md-12 text-center workout-add">
             <a href="{% url 'workout_create' %}">Add a workout</a>
         </div>
     </div>
+
+    {% if workouts %}
+
     <div class="row justify-content-center ">
         {% for workout in workouts %}
         <div class="col-md-3 sameHeight workout-card">
             <div class="workout-submited-by">{{workout.user.username}}</div>
             <a href="{% url 'workout_detail' pk=workout.pk %}">
                 <h5>{{ workout.workout_name}}</h5>
-                {% for exercise in exercises %}
-
                 <div class="bench">
-                    <h5>{{ exercise.exercise_name }}</h5>
-                    <p>Sets : {{ exercise.sets }} Reps : {{ exercise.reps }}</p>
+                    {% for exercise in workout.exercises.all %}
+                    <h5>{{exercise.exercise_name }}</h5>
+                    <p>Sets : {{exercise.sets }} Reps : {{exercise.reps }}</p>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </a>
-            
+
+
             <a class="waves-effect waves-light btn like-button" data-id="{{workout.id}}">
                 <i class="far fa-heart"></i> {% if workout.likes > 0 %} {{ workout.likes }} {% else %} {% endif %}
             </a>
@@ -56,8 +56,8 @@
         </div>
     </div>
 
-​
-{% endif %}
+
+    {% endif %}
 
 </div>
 
@@ -65,9 +65,8 @@
 <script type="text/javascript">
     document.getElementById("id_q").value = "{{query}}"
     document.getElementById("submit").addEventListener("click", function () {
-      console.log(id_q.value)
+        console.log(id_q.value)
     });
 </script>
 
 {% endblock %}
-

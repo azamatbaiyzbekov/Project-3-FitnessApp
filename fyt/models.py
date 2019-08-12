@@ -8,7 +8,7 @@ class Workout(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='workouts')
     
     def __str__(self):
-        return f"{self.workout_name}"
+        return f"{self.id}"
 
 
 class Exercise(models.Model):

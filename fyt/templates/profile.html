@@ -30,20 +30,11 @@
             <a href="{% url 'workout_detail' pk=workout.pk %}">
                 <h5>{{ workout.workout_name}}</h5>
                 <div class="bench">
-                    <h5>{{ workout.exercise_name_1 }}</h5>
-                    <p>Sets : {{ workout.sets_exercise_1 }} Reps : {{ workout.reps_exercise_1 }}</p>
-                </div>
-                <div class="bench">
-                    <h5>{{ workout.exercise_name_2 }}</h5>
-                    <p>Sets : {{ workout.sets_exercise_2 }} Reps : {{ workout.reps_exercise_2 }}</p>
-                </div>
-                <div class="bench">
-                    <h5>{{ workout.exercise_name_3 }}</h5>
-                    <p>Sets : {{ workout.sets_exercise_3 }} Reps : {{ workout.reps_exercise_3 }}</p>
-                </div>
-                <div class="bench">
-                    <h5>{{ workout.exercise_name_4 }}</h5>
-                    <p>Sets : {{ workout.sets_exercise_4 }} Reps : {{ workout.reps_exercise_4 }}</p>
+                    {% for exercise in workout.exercises.all %}
+                    <h5>{{exercise.exercise_name }}</h5>
+                    <p>Sets : {{exercise.sets }} Reps : {{exercise.reps }}</p>
+                    {% endfor %}
+
                 </div>
             </a>
             <a class="waves-effect waves-light btn like-button" data-id="{{workout.id}}">
