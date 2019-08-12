@@ -16,13 +16,15 @@ def about(request):
 
 @login_required
 def workout_list(request):
-
     query = ""
     if request.GET:
         query = request.GET['q']
-
     workouts = search(query)
-    return render(request, 'workout_list.html', {"workouts": workouts})
+    return render(request, 'workout_list.html', {"workouts": workouts, "query": query})
+@login_required
+def workout_detail(request, pk):
+    workout = Workout.objects.get(id=pk)
+    return render(request, 'workout_detail.html', {"workout": workout})
 
 @login_required
 def workout_detail(request, pk):
@@ -94,8 +96,6 @@ def search(query=None):
             Q(exercise_name_3__icontains=q) |
             Q(exercise_name_4__icontains=q)
         ).distinct()
-
         for post in posts:
             queryset.append(post)
-
     return list(set(queryset))

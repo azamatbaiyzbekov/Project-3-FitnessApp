@@ -1,48 +1,93 @@
 {% extends 'base.html' %}
 {% block content %}
 
-{% if error %}
-<p style="background-color: lightblue;">{{error}}</p>
-{% endif %}
+<div class="signup-body">
+    {% if error %}
+    <p style="background-color: lightblue;">{{error}}</p>
+    {% endif %}
+
+    <div class="container login-form">
+        <div class="row">
+            <div class="col-md-12 landing-fyt-login">
+                <p> <span class="landing-f">F </span><span class="landing-y">Y </span><span class="landing-t">T </span>
+                </p>
+            </div>
+            <section class="form-section-signup">
+                <p class="title text-center">Sign Up for free</p>
+                <form action="{% url 'register' %}" method="POST" class="workout-form">
+                    {% csrf_token %}
+                    <p>
+                        <label for="first_name">First Name</label>
+                        <input type="text" name="first_name" required maxlength="25" minlength="2">
+
+                    </p>
+                    <p>
+                        <label for="last_name">Last Name</label>
+                        <input type="text" name="last_name" required maxlength="25" minlength="2">
+
+                    </p>
+                    <p>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" required maxlength="25" minlength="2">
+
+                    </p>
+                    <p>
+                        <label for="username">Username</label>
+                        <input type="text" name="username" required maxlength="25" minlength="2">
+
+                    </p>
+                    <p>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" required maxlength="25" minlength="4">
+
+                    </p>
+                    <p>
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" name="password2" required maxlength="25" minlength="4"><br>
+
+                    </p>
+                    <button type="submit">Register</button>
+
+                </form>
+            </section>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small landing-footer">
+
+        <!-- Footer Links -->
+        <div class="container">
+            <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="{% url 'about' %}">About Us</a>
+                    </h6>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="{% url 'login' %}">Login</a>
+                    </h6>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="{% url 'register' %}">Sign Up</a>
+                    </h6>
+                </div>
+            </div>
+            <div class="newsletter text-center">
+                <p><i class="far fa-paper-plane"></i> Subscribe to our monthly newsletter</p>
+                <input type="text" placeholder="Your email address">
+                <button class="newsletter-go">Go</button>
+            </div>
+            <hr class="rgba-white-light mt-5" style="margin: 0 15%;">
+        </div>
+        <div class="text-center py-3">© 2019 FYT All rights reserved</div>
 
 
- <section class="form-section">
-    <form action="{% url 'register' %}" method="POST" class="workout-form">
-        {% csrf_token %}
-        <p>
-            <label for="first_name">First Name</label>
-            <input type="text" name="first_name" required maxlength="25" minlength="2">
+    </footer>
+    <!-- Footer -->
+</div>
 
-        </p>
-        <p>
-            <label for="last_name">Last Name</label>
-            <input type="text" name="last_name" required maxlength="25" minlength="2">
-    
-        </p>
-        <p>
-            <label for="email">Email</label>
-            <input type="email" name="email" required maxlength="25" minlength="2">
-    
-        </p>
-        <p>
-            <label for="username">Username</label>
-            <input type="text" name="username" required maxlength="25" minlength="2">
-    
-        </p>
-        <p>
-            <label for="password">Password</label>
-            <input type="password" name="password" required maxlength="25" minlength="4">
-    
-        </p>
-        <p>
-            <label for="password2">Confirm Password</label>
-            <input type="password" name="password2" required maxlength="25" minlength="4">
-    
-        </p>
-        <button type="submit">Register</button>
-
-    </form>
-</section> 
 
 
 {% endblock %}
