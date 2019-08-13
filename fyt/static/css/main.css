@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap');
 * {
     box-sizing: border-box;
 }
+
 .content-body {
     margin-top: 8vh;
 }
@@ -16,36 +19,43 @@
     margin: 10px;
     background: #DDEBF3;
 }
+
 .workout-card:hover {
     border: 1px solid #6E5BAA;
 }
 
 .workout-submited-by {
-    font-size : 1.5em;
+    font-size: 1.5em;
     color: blue;
     text-align: center;
 }
-.workout-card > a, .workout-card li {
+
+.workout-card>a,
+.workout-card li {
     text-decoration: none;
     list-style: none;
     color: black;
 }
+
 .fa-heart {
     color: red;
     font-size: 2em;
 }
+
 .workout-add {
     margin: 2rem;
 }
-.workout-add > a {
+
+.workout-add>a {
     padding: 1em;
     color: #FFF;
-    text-decoration: none; 
+    text-decoration: none;
     background: #6E5BAA;
     border: none;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .workout-add a:hover {
     background: yellow;
     transition: all .5s ease;
@@ -61,41 +71,48 @@
 .workout-card .workout-edit {
     padding: 8px;
 }
+
 .workout-card .workout-delete {
-    float: right;  
-    padding: 3px 8px; 
+    float: right;
+    padding: 3px 8px;
 }
 
 /*===================== ABOUT PAGE =================== */
-.about-fyt-header h3{
+.about-fyt-header h3 {
     margin-top: 1.5em;
 }
+
 .about-fyt p {
     font-family: 'Saira Stencil One', cursive;
     font-size: 8em;
     transform: rotate(-25deg);
     margin-top: 1rem;
 }
+
 .about-img-description p {
     font-size: 1.5em;
     margin: 3rem 0;
 }
+
 /* About page Fyt span colors */
-.about-f { 
+.about-f {
     color: yellow;
 }
+
 .about-y {
     color: black;
 }
+
 .about-t {
     color: yellow;
 }
+
 .about-fyt img {
     transform: rotate(-25deg);
-    margin: 0 0 10em 8em; 
+    margin: 0 0 10em 8em;
 }
 
-.about-description  {
+.about-description {
     font-size: 1.5em;
     margin: auto 0;
     line-height: 2;
@@ -108,16 +125,20 @@
     width: 18rem;
     height: 18rem;
 }
+
 .about-img-description {
     margin-top: 5rem;
 }
+
 .github-link {
     top: -15;
     font-size: 3rem;
 }
+
 .git {
     color: #FFC0CB;
 }
+
 .linked {
     color: #0077B5;
 }
@@ -130,39 +151,52 @@
     margin-top: 2rem;
 
 }
+
 .landing-fyt-row {
-    background: #624989;
+    background-image: url('/static/images/d3.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 70vh;
 }
+
 .landing-f {
-    color: yellow;
+    color: white;
 }
+
 .landing-y {
     color: white;
 }
+
 .landing-t {
-    color: yellow;
+    color: white;
 }
+
 .landing-fyt-p {
     color: #EBD7B6;
 }
 
 .landing-icon-row {
-    background: #EDF1F6;
+    background-image: url('/static/images/d1.jpg');
+    background-size: cover;
+
+
 }
+
 .landing-icon-header {
     margin-top: 1rem;
 }
+
 .landing-icon-header p {
     font-size: 1.5rem;
 }
+
 .landing-icon {
     font-size: 3rem;
     margin: 2rem;
 }
-.landing-icon:hover {
-    color: orange;
-}
+
 .landing-icon-p {
     font-size: 1rem;
     margin: 2rem;
@@ -179,51 +213,66 @@
     padding: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .landing-workout-card ul {
     list-style-type: none;
     line-height: 1.5rem;
 }
+
 .landing-workout-card h5 {
     text-align: center;
 }
+
 .landing-input {
     width: 30%;
     border-radius: 5px;
     border: 1px solid black;
 }
+
 .landing-input-setrep {
     width: 15%;
     border-radius: 5px;
     border: 1px solid black;
 
 }
-.btn-primary, .btn-warning, .btn-danger {
+
+.btn-primary,
+.btn-warning,
+.btn-danger {
     border-radius: 4px;
     padding: .5em;
 }
+
 .lan-p {
     background: #7991e5;
     transition: all 2s ease;
 }
+
 .lan-p:hover {
     background: #017BFF;
 }
+
 .lan-e {
     transition: all 2s ease;
     background: #f9b539;
 }
+
 .lan-e:hover {
     background: #FFA500;
 }
+
 .lan-d {
     transition: all 2s ease;
     background: #ff5b5b;
 }
+
 .lan-d:hover {
     background: #DC3545;
 }
-.bench p, .bench h5 {
-    display:inline-block;
+
+.bench p,
+.bench h5 {
+    display: inline-block;
     line-height: 3rem;
 }
 
@@ -232,23 +281,27 @@
 }
 
 .bench h5 {
-    float:left;
+    float: left;
 }
+
 .landing-footer {
     margin-top: 2rem;
     background: #F0F0F0;
 }
+
 .newsletter input {
     border-radius: 4px;
     border: 1px solid #d7d7d7;
     padding: 5px 20px;
 }
-.newsletter .newsletter-go input{
+
+.newsletter .newsletter-go input {
     background-color: #6e5baa;
     border: 0;
     border-radius: 4px;
     padding: 5px 15px;
 }
+
 .mailchimp {
     display: flex;
 }
@@ -256,30 +309,41 @@
 .newsletter button:hover {
     opacity: .9;
 }
-.sameHeight {min-height: 250px;}
+
+.sameHeight {
+    min-height: 250px;
+}
 
 /*========================= navbar *====================*/
 
 .navbar {
-    background: #0f0e0e;
+    background-color: rgba(0, 0, 0);
 }
-.navbar li a, .navbar-brand {
-    color: white;
-    margin-right: 2rem;
+​
+.navbar-brand {
+    font-size: 2rem;
+    font-family: 'Saira Stencil One', cursive;
+    color: rgb(201, 201, 201);
+}
+​
+.navbar li a{
+    margin: 0 1rem 0 6rem;
+    text-transform: uppercase;
+}
+​
+.navbar li a {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: rgb(201, 201, 201);
 }
 .navbar .sign-up {
-    background: yellow;
-    border-radius: 1px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 .navbar li a:hover, .navbar-brand:hover {
-    color: yellow;
+    color: white;
 }
-.sign-up {
-    color: black !important;
-}
-.sign-up:hover {
-    background: orange;
-}
+/* .sign-up {
+    color: rgb(201, 201, 201) !important;
+} */
 
 /* ================== Login / Signup =====================*/
 
@@ -287,9 +351,11 @@
     background-color: #624989;
     height: 100vh;
 }
+
 .signup-body {
     background-color: #624989;
 }
+
 .form-section {
     background: #FFF;
     margin: 0 auto;
@@ -299,11 +365,13 @@
     margin-top: 7em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .form-section input {
     border: 1px solid black;
     border-radius: 4px;
     padding: 5px 15px;
 }
+
 .form-section button {
     border: 0;
     border-radius: 4px;
@@ -312,6 +380,7 @@
     background: #6e5baa;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .landing-fyt-login {
     position: absolute;
     font-family: 'Saira Stencil One', cursive;
@@ -319,9 +388,11 @@
     text-align: center;
     left: -.5%;
 }
+
 .form-section .title {
     font-size: 1.2em;
 }
+
 .form-section-signup {
     background: #FFF;
     margin: 0 auto;
@@ -331,12 +402,14 @@
     margin-top: 7em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .form-section-signup input {
     border: 1px solid black;
     border-radius: 4px;
     padding: 5px 15px;
     width: 100%;
 }
+
 .form-section-signup button {
     border: 0;
     border-radius: 4px;
@@ -350,6 +423,7 @@
 .workout-form-body {
     background: #6E5BAA;
 }
+
 .workout-form-section {
     background: #FFF;
     margin: 0 auto;
@@ -359,12 +433,14 @@
     margin-top: 3em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.workout-form-section input{
+
+.workout-form-section input {
     border: 1px solid black;
     border-radius: 4px;
     padding: 5px 15px;
     float: right;
 }
+
 .workout-form-section button {
     border: 0;
     border-radius: 4px;
@@ -373,4 +449,3 @@
     background: #6e5baa;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
