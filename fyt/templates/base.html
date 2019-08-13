@@ -12,7 +12,6 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
     <title>fyt</title>
 </head>
@@ -22,8 +21,6 @@
         <nav class="navbar navbar-expand-lg fixed-top">
             <a class="navbar-brand" href="{% url 'landing' %}">
                     <i class="fas fa-dumbbell"></i>
-                <!-- <img src="{% static 'images/dumbbell.png' %}" width="30" height="30" class="d-inline-block align-top navbar-logo"
-                    alt=""> -->
                 FYT
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -35,7 +32,7 @@
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'workout_list' %}">Home</a>
+                        <a class="nav-link" href="{% url 'workout_list' %}">Workouts</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'about' %}">About Us</a>
@@ -49,7 +46,7 @@
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'login' %}">Login</a>
