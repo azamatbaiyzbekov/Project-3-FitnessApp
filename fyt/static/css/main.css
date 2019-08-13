@@ -243,12 +243,16 @@
     border: 1px solid #d7d7d7;
     padding: 5px 20px;
 }
-.newsletter button {
+.newsletter .newsletter-go input{
     background-color: #6e5baa;
     border: 0;
     border-radius: 4px;
     padding: 5px 15px;
 }
+.mailchimp {
+    display: flex;
+}
+
 .newsletter button:hover {
     opacity: .9;
 }

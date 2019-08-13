@@ -22,7 +22,7 @@ def workout_list(request):
     workouts = search(query)
 
     return render(request, 'workout_list.html', {"workouts": workouts, "query": query})
-
+ 
 @login_required
 def workout_detail(request, pk):
     workout = Workout.objects.get(id=pk)
@@ -47,7 +47,6 @@ def workout_create(request):
             e_workout.user = request.user
             e_workout.workout = workout
             e_workout.save()
-            print(e_workout.sets)
             return redirect('workout_list')
     else: 
         form = WorkoutForm()

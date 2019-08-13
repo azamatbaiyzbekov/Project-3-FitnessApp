@@ -24,40 +24,49 @@
         {% for workout in workouts %}
         <div class="col-md-3 sameHeight workout-card">
             <div class="workout-submited-by">{{workout.user.username}}</div>
-            <a href="{% url 'workout_detail' pk=workout.pk %}">
-                <h5>{{ workout.workout_name}}</h5>
-                <div class="bench">
+                <a href="{% url 'workout_detail' pk=workout.pk %}">
+                    <h5>{{ workout.workout_name}}</h5>
                     {% for exercise in workout.exercises.all %}
-                    <h5>{{exercise.exercise_name }}</h5>
-                    <p>Sets : {{exercise.sets }} Reps : {{exercise.reps }}</p>
+                    <div class="bench">
+                        <h5>{{exercise.exercise_name_1 }}</h5>
+                        <p>Sets : {{exercise.sets_1 }} Reps : {{exercise.reps_1 }}</p>
+                    </div>
+                    <div class="bench">
+                        <h5>{{exercise.exercise_name_2 }}</h5>
+                        <p>Sets : {{exercise.set_2 }} Reps : {{exercise.reps_2 }}</p>
+                    </div>
+                    <div class="bench">
+                        <h5>{{exercise.exercise_name_3 }}</h5>
+                        <p>Sets : {{exercise.sets_3 }} Reps : {{exercise.reps_3 }}</p>
+                    </div>
                     {% endfor %}
-                </div>
-            </a>
-
-
+                </a>
+            
             <a class="waves-effect waves-light btn like-button" data-id="{{workout.id}}">
                 <i class="far fa-heart"></i> {% if workout.likes > 0 %} {{ workout.likes }} {% else %} {% endif %}
             </a>
         </div>
         {% endfor %}
     </div>
-    {% else %}
 
-    <div class="row">
-        <div class="card m-auto">
-            <div class="card-body mt-2 mb-2">
-                <h2 class="card-title">
-                    No Results
-                </h2>
-                <p class="card-text ">
-                    There were no results matching your search: "{{query}}".
-                </p>
-            </div>
+</div>
+{% else %}
+
+<div class="row">
+    <div class="card m-auto">
+        <div class="card-body mt-2 mb-2">
+            <h2 class="card-title">
+                No Results
+            </h2>
+            <p class="card-text ">
+                There were no results matching your search: "{{query}}".
+            </p>
         </div>
     </div>
+</div>
 
 
-    {% endif %}
+{% endif %}
 
 </div>
 
