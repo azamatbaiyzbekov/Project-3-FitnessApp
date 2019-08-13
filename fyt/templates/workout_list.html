@@ -2,31 +2,36 @@
 
 
 {% block content %}
-  
+{% load staticfiles %}
+<section id="workout-bg">
+<hr>
+<hr>
+    <div class="container mt-5">
+        <div class="search-block row">
+            <div class="col-md-4 offset-md-4 text-center">
 
-
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <form method="GET">
-                <input type="text" name="q" value="{{request.GET.q}}" id="id_q" placeholder="Search...">
-                <button id="submit" type="submit">Search</button>
-            </form>
+                <form id="form" method="GET">
+                    <input type="text" class="searchTerm" name="q" value="{{request.GET.q}}" id="id_q"
+                        placeholder="Search...">
+                    <button id="submit" class="searchButton" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12 text-center workout-add">
-            <a href="{% url 'workout_create' %}">Add a workout</a>
+        <hr>
+        <div class="row">
+            <div class="col-md-12 text-center workout-add">
+                <a href="{% url 'workout_create' %}">Add a workout</a>
+            </div>
         </div>
-    </div>
 
-    {% if workouts %}
+        {% if workouts %}
 
-    <div class="row justify-content-center ">
-        {% for workout in workouts %}
-        <div class="col-md-3 sameHeight workout-card">
-            <div class="workout-submited-by">{{workout.user.username}}</div>
+        <div class="row justify-content-center ">
+            {% for workout in workouts %}
+            <div class="col-md-3 sameHeight workout-card">
+                <div class="workout-submited-by">{{workout.user.username}}</div>
                 <a href="{% url 'workout_detail' pk=workout.pk %}">
                     <h5>{{ workout.workout_name}}</h5>
                     {% for exercise in workout.exercises.all %}
@@ -36,7 +41,7 @@
                     </div>
                     <div class="bench">
                         <h5>{{exercise.exercise_name_2 }}</h5>
-                        <p>Sets : {{exercise.set_2 }} Reps : {{exercise.reps_2 }}</p>
+                        <p>Sets : {{exercise.sets_2 }} Reps : {{exercise.reps_2 }}</p>
                     </div>
                     <div class="bench">
                         <h5>{{exercise.exercise_name_3 }}</h5>
@@ -44,34 +49,34 @@
                     </div>
                     {% endfor %}
                 </a>
-            
-            <a class="waves-effect waves-light btn like-button" data-id="{{workout.id}}">
-                <i class="far fa-heart"></i> {% if workout.likes > 0 %} {{ workout.likes }} {% else %} {% endif %}
-            </a>
+
+                <a class="waves-effect waves-light btn like-button" data-id="{{workout.id}}">
+                    <i class="far fa-heart"></i> {% if workout.likes > 0 %} {{ workout.likes }} {% else %} {% endif %}
+                </a>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+
+    </div>
+    {% else %}
+
+    <div class="row">
+        <div class="card m-auto">
+            <div class="card-body mt-2 mb-2">
+                <h2 class="card-title">
+                    No Results
+                </h2>
+                <p class="card-text ">
+                    There were no results matching your search: "{{query}}".
+                </p>
+            </div>
+        </div>
     </div>
 
-</div>
-{% else %}
 
-<div class="row">
-    <div class="card m-auto">
-        <div class="card-body mt-2 mb-2">
-            <h2 class="card-title">
-                No Results
-            </h2>
-            <p class="card-text ">
-                There were no results matching your search: "{{query}}".
-            </p>
-        </div>
-    </div>
-</div>
+    {% endif %}
 
-
-{% endif %}
-
-</div>
+</section>
 
 
 <script type="text/javascript">

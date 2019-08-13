@@ -1,9 +1,8 @@
 {% extends 'base.html'%}
 {% block content %}
-
-<div class="container">
+<div class="container mt-5">
     <div class="row">
-        <div class="col-md-12 sameHeight workout-card m-auto">
+        <div class="col-md-12 sameHeight workout-card m-auto mt-5">
             <div class="workout-submited-by">{{workout.user.username}}</div>
 
             <h5>{{ workout.workout_name}}</h5>
@@ -14,7 +13,7 @@
             </div>
             <div class="bench">
                 <h5>{{exercise.exercise_name_2 }}</h5>
-                <p>Sets : {{exercise.set_2 }} Reps : {{exercise.reps_2 }}</p>
+                <p>Sets : {{exercise.sets_2 }} Reps : {{exercise.reps_2 }}</p>
             </div>
             <div class="bench">
                 <h5>{{exercise.exercise_name_3 }}</h5>
