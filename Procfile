@@ -1,1 +1,1 @@
-web: gunicorn fyt.wsgi --log-file -
+web: gunicorn fyt_project.wsgi --log-file -
