@@ -8,11 +8,11 @@ https://fytapp.herokuapp.com/
 -------------------------------------------
 #### What is FYT?
 
-- FYT is a ftiness app for a healthy life-style of users to share/post about their workout activities and keep track of it! This project was completed in 6 days as a a group project for General Assembly's Software Engineering Immersive 3 course in July, 2019.
+- FYT is a fitness app for a healthy life-style of users to share/post about their workout activities and keep track of it! This project was completed in 6 days as a a group project for General Assembly's Software Engineering Immersive 3 course in July, 2019.
 
 -------------------------------------------
 
-#### Technologies Stack (MERN)
+#### Technologies 
 - Python3
 - Django
 - PostgresSQL
